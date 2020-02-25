@@ -25,7 +25,7 @@ for i in names:
     search.clear()  # Clears existing text in the search bar
     search.send_keys(i)  # Types what you want to search
     search.send_keys(Keys.RETURN)  # Return key in order to search
-    driver.implicitly_wait(3)  # Waits 4 seconds for results
+    driver.implicitly_wait(3)  # Waits 3 seconds for results
     email = driver.find_element_by_partial_link_text('pitt')  # Finds location of Pitt email address in <a> tag
     dl_email = email.get_attribute('href')
     dl_email = dl_email.replace("mailto:", "")
